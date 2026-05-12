@@ -1,0 +1,126 @@
+.app-shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+  background:
+    linear-gradient(135deg, rgba(0, 117, 101, 0.12), transparent 38%),
+    linear-gradient(315deg, rgba(35, 73, 126, 0.12), transparent 42%),
+    #f5f7f4;
+  color: #17211d;
+}
+
+.hero {
+  width: min(100%, 1080px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero__content,
+.status-panel {
+  border: 1px solid rgba(23, 33, 29, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(24, 44, 40, 0.12);
+}
+
+.hero__content {
+  padding: clamp(32px, 6vw, 72px);
+}
+
+.hero__eyebrow {
+  margin: 0 0 18px;
+  color: #006d62;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  max-width: 760px;
+  color: #101915;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero__description {
+  max-width: 660px;
+  margin: 28px 0 0;
+  color: #44504b;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.hero__actions span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 109, 98, 0.18);
+  border-radius: 999px;
+  background: #eef7f4;
+  color: #005c54;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.status-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px;
+  background: #17211d;
+  color: #f5f7f4;
+}
+
+.status-panel__label {
+  display: block;
+  margin-bottom: 12px;
+  color: #8bd1c4;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-panel strong {
+  display: block;
+  max-width: 260px;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.status-panel p {
+  margin: 0;
+  color: #cbd8d3;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    place-items: stretch;
+    padding: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__content,
+  .status-panel {
+    padding: 28px;
+  }
+}
